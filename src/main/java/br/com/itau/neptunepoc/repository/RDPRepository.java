@@ -55,7 +55,7 @@ public class RDPRepository {
                         .next());
     }
 
-    
+
     public Vertex getOrInsertVerticeRelantioship(VerticeSocio vertice, String idOrigem, String idDestino) {
         return (Vertex) graph.V(idOrigem).outE(HAS_PARTNER).inV().hasLabel(vertice.getLabel()).as("R")
                 .inE(IS_PARTNER).outV().hasId(idDestino).select("R")

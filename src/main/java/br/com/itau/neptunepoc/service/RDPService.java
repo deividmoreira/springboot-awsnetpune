@@ -36,8 +36,8 @@ public class RDPService {
         Edge arestaDestinoPerfil = getOrInsertAresta(vertexDestino, vertexDestinoPerfil, relationship.getArestaDestinoPerfil());
         Edge arestaOrigemRelacionamento = getOrInsertAresta(vertexOrigem, vertexRelacionamento, relationship.getArestaOrigemRelacionamento());
         Edge arestaDestinoRelacionamento = getOrInsertAresta(vertexDestino, vertexRelacionamento, relationship.getArestaDestinoRelacionamento());
-//        return relationshipMapper.populateRelationship(edge);
-        return null;
+        
+        return relationshipMapper.populateRelationship(edge);       
     }
 
     private Vertex getOrInsertVertexProfile(VerticePerfil verticeOrigemPerfil) {
